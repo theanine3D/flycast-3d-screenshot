@@ -6,6 +6,19 @@ To use this feature, you must assign a hotkey to the "Save 3D Screenshot" keymap
 Captures are saved in .gltf format, to a "3D" subfolder inside the "Screenshots" folder where Flycast saves screenshots by default. On Windows, that folder is:
 `%USERPROFILE%\Pictures\Screenshots\3D\`
 
+## Previews
+<img width="709" height="470" alt="image" src="https://github.com/user-attachments/assets/e55bec0e-67b7-4048-9462-bb44704f15f9" />
+
+- Jet Set Radio capture, imported into Blender
+
+
+<img width="759" height="381" alt="image" src="https://github.com/user-attachments/assets/f4c07625-dcb7-4c5d-a12f-b3e375215b17" />
+
+- Super Magnetic Neo capture, imported into Blender
+
+
+(Original Flycast readme below:)
+
 ---
 # Flycast
 
