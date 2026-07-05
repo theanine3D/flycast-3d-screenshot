@@ -693,6 +693,51 @@ bool BaseTextureCacheData::Update()
 	return true;
 }
 
+bool BaseTextureCacheData::decodeToRGBA(std::vector<u8>& out)
+{
+	if (texconv32 == nullptr || width == 0 || height == 0)
+		return false;
+	if (startAddress > VRAM_SIZE || mmStartAddress + size > VRAM_SIZE)
+		return false;
+
+	if (IsPaletted())
+	{
+		palette_update();
+		if (tcw.PixelFmt == PixelPal4)
+			::palette_index = tcw.PalSelect << 4;
+		else
+			::palette_index = (tcw.PalSelect >> 4) << 8;
+	}
+	if (tcw.VQ_Comp)
+		::vq_codebook = &vram[startAddress];
+
+	u32 stride = width;
+	if (tcw.StrideSel && tcw.ScanOrder && tex->PL32 != nullptr)
+	{
+		stride = (TEXT_CONTROL & 31) * 32;
+		if (stride == 0)
+			stride = width;
+	}
+
+	PixelBuffer<u32> pb32;
+	pb32.init(width, height);
+	texconv32(&pb32, (u8 *)&vram[mmStartAddress], stride, height);
+
+	// The converters pack pixels in the active renderer's color order
+	const bool bgraOrder = pvrTexInfo == directx::pvrTexInfo;
+	out.resize(width * height * 4);
+	const u8 *src = (const u8 *)pb32.data();
+	u8 *dst = out.data();
+	for (u32 i = 0; i < (u32)width * height; i++, src += 4, dst += 4)
+	{
+		dst[0] = src[bgraOrder ? 2 : 0];
+		dst[1] = src[1];
+		dst[2] = src[bgraOrder ? 0 : 2];
+		dst[3] = src[3];
+	}
+	return true;
+}
+
 void BaseTextureCacheData::CheckCustomTexture()
 {
 	if (IsCustomTextureAvailable())

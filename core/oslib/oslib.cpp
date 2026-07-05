@@ -420,6 +420,17 @@ void saveScreenshot(const std::string& name, const std::vector<u8>& data)
 
 #endif
 
+std::string getScreenshots3DPath()
+{
+#if !defined(__ANDROID__) && !defined(TARGET_UWP) && !defined(TARGET_IPHONE) && !defined(__SWITCH__)
+	std::string path = getScreenshotsPath() + "/3D";
+#else
+	std::string path = get_writable_config_path("screenshots3d");
+#endif
+	make_directory(path);
+	return path;
+}
+
 #ifndef USE_LIBCDIO
 const std::vector<std::string>& getCdromDrives() {
 	static std::vector<std::string> empty;

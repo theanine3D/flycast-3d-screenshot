@@ -231,6 +231,7 @@ static constexpr Mapping dcButtons_src[] = {
 	{ EMU_BTN_PREVSLOT, Tnop("Previous Save State Slot") },
 	{ EMU_BTN_BYPASS_KB, Tnop("Bypass Emulated Keyboard") },
 	{ EMU_BTN_SCREENSHOT, Tnop("Save Screenshot") },
+	{ EMU_BTN_SCREENSHOT_3D, Tnop("Save 3D Screenshot") },
 
 	{ EMU_BTN_NONE, nullptr }
 };
@@ -291,6 +292,7 @@ static constexpr Mapping arcadeButtons_src[] = {
 	{ EMU_BTN_PREVSLOT, Tnop("Previous Save State Slot") },
 	{ EMU_BTN_BYPASS_KB, Tnop("Bypass Emulated Keyboard") },
 	{ EMU_BTN_SCREENSHOT, Tnop("Save Screenshot") },
+	{ EMU_BTN_SCREENSHOT_3D, Tnop("Save 3D Screenshot") },
 
 	{ EMU_BTN_NONE, nullptr }
 };

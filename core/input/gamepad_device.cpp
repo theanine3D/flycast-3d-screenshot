@@ -143,6 +143,10 @@ bool GamepadDevice::handleButtonInput(int port, DreamcastKey key, bool pressed)
 			if (pressed)
 				gui_takeScreenshot();
 			break;
+		case EMU_BTN_SCREENSHOT_3D:
+			if (pressed)
+				gui_take3DScreenshot();
+			break;
 		case DC_AXIS_LT:
 			if (port >= 0)
 				lt[port] = pressed ? 0xffff : 0;

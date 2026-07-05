@@ -57,6 +57,7 @@ enum DreamcastKey
 	EMU_BTN_SAVESTATE_RAM,
 	EMU_BTN_BYPASS_KB,
 	EMU_BTN_SCREENSHOT,
+	EMU_BTN_SCREENSHOT_3D,
 	EMU_BTN_SRVMODE,		// used internally by virtual gamepad
 
 	// Real axes

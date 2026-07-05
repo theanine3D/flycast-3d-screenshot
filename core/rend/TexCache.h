@@ -149,6 +149,9 @@ public:
 
 	void ComputeHash();
 	bool Update();
+	// Decode this texture from VRAM to RGBA 8888 on the CPU, without uploading to the GPU
+	// or disturbing the texture cache state. Used by the 3D screenshot feature.
+	bool decodeToRGBA(std::vector<u8>& out);
 	virtual void UploadToGPU(int width, int height, const u8 *temp_tex_buffer, bool mipmapped, bool mipmapsIncluded = false) = 0;
 	virtual bool Force32BitTexture(TextureType type) const { return false; }
 	void CheckCustomTexture();

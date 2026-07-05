@@ -54,6 +54,7 @@ void gui_cycleSaveStateSlot(int step);
 void gui_togglePause();
 std::string gui_getCurGameBoxartUrl();
 void gui_takeScreenshot();
+void gui_take3DScreenshot();
 void gui_runOnUiThread(std::function<void()> function);
 
 enum class GuiState {

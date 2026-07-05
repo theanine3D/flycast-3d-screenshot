@@ -62,6 +62,8 @@ namespace hostfs
 
 	std::string getShaderCachePath(const std::string& filename);
 	void saveScreenshot(const std::string& name, const std::vector<u8>& data);
+	// Base directory where 3D screenshots (glTF captures) are saved. Created if needed.
+	std::string getScreenshots3DPath();
 
 	const std::vector<std::string>& getCdromDrives();
 #ifdef __ANDROID__
