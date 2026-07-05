@@ -1,3 +1,12 @@
+This is a fork of Flycast that adds a "3D Screenshot" feature, allowing users to capture 3D geometry currently being rendered on the screen, along with any textures.
+
+To use this feature, you must assign a hotkey to the "Save 3D Screenshot" keymap in your controller mapping settings. I suggest "Ctrl + F12", but you can choose anything.
+- <img width="632" height="230" alt="image" src="https://github.com/user-attachments/assets/36eb2660-bf03-45a7-99f3-1eed91366418" />
+
+Captures are saved in .gltf format, to a "3D" subfolder inside the "Screenshots" folder where Flycast saves screenshots by default. On Windows, that folder is:
+`%USERPROFILE%\Pictures\Screenshots\3D\`
+
+---
 # Flycast
 
 [![Android CI](https://github.com/flyinghead/flycast/actions/workflows/android.yml/badge.svg)](https://github.com/flyinghead/flycast/actions/workflows/android.yml)
