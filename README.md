@@ -7,12 +7,12 @@ Captures are saved in .gltf format, to a "3D" subfolder inside the "Screenshots"
 `%USERPROFILE%\Pictures\Screenshots\3D\`
 
 ## Previews
-<img width="709" height="470" alt="image" src="https://github.com/user-attachments/assets/e55bec0e-67b7-4048-9462-bb44704f15f9" />
+<img width="854" height="459" alt="image" src="https://github.com/user-attachments/assets/a0aba179-25ea-4e71-9548-782499950d90" />
 
 - Jet Set Radio capture, imported into Blender
 
 
-<img width="759" height="381" alt="image" src="https://github.com/user-attachments/assets/f4c07625-dcb7-4c5d-a12f-b3e375215b17" />
+<img width="856" height="453" alt="image" src="https://github.com/user-attachments/assets/8bd287a2-422b-468c-b434-8b97002781e3" />
 
 - Super Magnetic Neo capture, imported into Blender
 
